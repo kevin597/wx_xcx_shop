@@ -1,0 +1,73 @@
+/* pages/shop/prolist/prolist.wxss */
+@import '/pages/shop/common.wxss';
+
+.products {
+  margin: 20rpx auto;
+  height: 250rpx;
+}
+
+.pros_list_img {
+  width: 250rpx;
+  height: 250rpx;
+  display: block;
+}
+
+.products-right {
+  margin: 0 15rpx;
+}
+
+.products-title {
+  padding-top: 4rpx;
+  line-height: 40rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  min-height: 120rpx;
+  text-align: left;
+}
+
+.go-shop {
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #666;
+}
+
+.products-price {
+  margin-top: 20rpx;
+  text-align: left;
+}
+
+.add-cart {
+  height: 56rpx;
+  width: 60rpx;
+}
+
+.my-cart {
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  right: 30rpx;
+  bottom: 200rpx;
+}
+
+.my-cart-img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.my-cart-num {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 50%;
+  right: -4rpx;
+  top: -4rpx;
+  overflow: hidden;
+  font-size: 26rpx;
+}

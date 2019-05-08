@@ -1,0 +1,113 @@
+/* pages/shop/contact/contact.wxss */
+@import '/pages/shop/common.wxss';
+
+.message {
+  padding: 20rpx 30rpx;
+  overflow: hidden;
+}
+
+.message-right {
+  justify-content: flex-end;
+}
+
+.message-left {
+  justify-content: flex-start;
+}
+
+.message-user {
+  width: 80rpx;
+}
+
+.message-img {
+  width: 74rpx;
+  height: 74rpx;
+  border-radius: 50%;
+}
+
+.invite {
+  max-width: 510rpx;
+  font-size: 30rpx;
+  color: #1a1a1a;
+  min-height: 80rpx;
+  line-height: 44rpx;
+  padding: 18rpx 20rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.message-right .invite {
+  background-color: #afe56e;
+  border: 1px solid #85bc5f;
+}
+
+.message-left .invite {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+}
+
+.invite:after {
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 30rpx;
+}
+
+.message-right .invite:after {
+  background-color: #afe56e;
+  border: 1px #85bc5f;
+  border-style: solid none none solid;
+  transform: rotate(135deg);
+  right: -12rpx;
+}
+
+.message-left .invite:after {
+  background-color: #fff;
+  border: 1px #d9d9d9;
+  border-style: solid none none solid;
+  transform: rotate(-45deg);
+  left: -12rpx;
+}
+
+.message-right .message-time, .message-right .invite {
+  margin-right: 30rpx;
+}
+
+.message-left .message-time, .message-left .invite {
+  margin-left: 30rpx;
+}
+
+.message-bottom {
+  background-color: #f6f6f6;
+  height: 110rpx;
+  padding: 14rpx 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.message-input {
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.message-submit {
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 20rpx;
+  line-height: 50rpx;
+  text-align: center;
+  padding: 0;
+  font-size: 50rpx;
+  border-radius:50rpx;
+  border: 1px solid #303030;
+}

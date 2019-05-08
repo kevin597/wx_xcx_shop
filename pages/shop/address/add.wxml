@@ -1,0 +1,40 @@
+<!--pages/shop/address/add.wxml-->
+<form class="address" bindsubmit="formSubmit">
+
+  <view class='address-group'>
+    <view class="section flex-row">
+      <label class='font-size-30'>收货人</label>
+      <input class="flex-full" name="name" placeholder="请输入收货人姓名" />
+    </view>
+    <view class="section border-top flex-row">
+      <label class='font-size-30'>联系电话</label>
+      <input class="flex-full" name="tel" placeholder="请输入联系电话" />
+    </view>
+  </view>
+
+  <view class='address-group'>
+    <view class="section flex-row">
+      <label class='font-size-30'>所在地区</label>
+      <picker class="flex-full" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" name="region">
+        <view class="picker">
+          {{region[0]}} / {{region[1]}} / {{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section border-top flex-row">
+      <label class='font-size-30'>详细地址</label>
+      <input class="flex-full" name="address" placeholder="请输入详细收货地址" />
+    </view>
+  </view>
+
+  <view class='address-group'>
+    <view class="section flex-row">
+      <text class='font-size-30'>设为默认地址</text>
+      <switch class="text-a-r flex-full" colo="#f7824e" name="switch" />
+    </view>
+  </view>
+
+  <view class="btn-area">
+    <button form-type="submit" class="bg-linear">保存</button>
+  </view>
+</form>

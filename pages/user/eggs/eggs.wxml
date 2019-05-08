@@ -1,0 +1,32 @@
+<!--pages/user/eggs/eggs.wxml-->
+
+<scroll-view scroll-y='true' style='width:100%;height:calc(100% - 46px)'>
+  
+  <view class='egg_top'>
+    <image class='bg' src='/images/personal/egg_bg.png'></image>
+    <view class='t1 tc pr h5'>当前鸡蛋</view>
+    <view class='cur tc pr'>{{egg.cur}}</view>
+    <view class='flex-row pr h5 flex-top wrap'>
+      <view class='flex-full tl'>
+        <text class='val'>会员权益：{{egg.vip}}个鸡蛋</text>
+        <text class='val'>当前剩余：{{egg.plu}}个鸡蛋</text>
+      </view>
+      <view class='flex-full tr'>
+        <text class='val'>系统获得：{{egg.sys}}个鸡蛋</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class='detail dm-mt bg-w top-line bottom-line dm-norlist dm-mb'>
+    <view class='list bottom-line flex-row flex-top' wx:for='{{history}}' wx:key='item.id'>
+      <view class='name flex-full flex-col flex-top'>
+        <view class='type flex-full'>{{item.type}}</view>
+        <view class='time h5'>{{item.time}}</view>
+      </view>
+      <view class='cot money'>{{item.val}}</view>
+    </view>
+  </view>
+
+</scroll-view>
+
+<button class='bottom-btn' bindtap='apply_cash'>提现鸡蛋</button>

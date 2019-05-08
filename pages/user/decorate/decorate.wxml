@@ -1,0 +1,67 @@
+<!--pages/user/decorate/decorate.wxml-->
+
+<scroll-view scroll-y='true' style='width:100%;height:calc(100% - 46px)'>
+  <view class='decorate_wrap'>
+
+    <view class='dm-norlist bg-w top-line bottom-line dm-mt dm-mb'>
+
+      <view class='input flex-row bottom-line'>
+        <view class='name'>店铺名称</view>
+        <view class='cot flex-full'>
+          <input class='max-input tr' bindinput='set_name' value='{{form.name}}' placeholder='请输入店铺名称' />
+        </view>
+      </view>
+
+      <view class='input flex-row bottom-line store_photo' bindtap='update_storePhoto'>
+        <view class='name'>店铺头图</view>
+        <view class='cot flex-full dm-clearfix'>
+          <view class='photo dm-right'>
+            <image wx:if='{{form.photo}}' class='img' src='{{form.photo}}'></image>
+            <view wx:else class='btn'></view>
+          </view>
+        </view>
+      </view>
+
+      <view class='input flex-col flex-top bottom-line'>
+        <view class='name flex-full'>店铺介绍</view>
+        <view class='cot flex-full' style='width:calc(100% - 12px);'>
+          <textarea class='textarea' bindinput='set_intro' value='{{form.intro}}' maxlength='-1' placeholder='请输入店铺名称'></textarea>
+        </view>
+      </view>
+
+    </view>
+
+    <view class='update_mod bg-w top-line bottom-line dm-mb'>
+      <view class='dm-title'>上传视频</view>
+      <view class='bottom-line tl video-wrap'>
+        <view class='box' wx:for="{{form.videos}}" wx:key='index'>
+          <video src='{{item}}' class='img' poster='{{item}}' controls="{{false}}" show-play-btn="{{false}}" show-fullscreen-btn="{{false}}" show-center-play-btn="{{false}}"></video>
+          <view class='del' bindtap='del_video' data-video-index='{{index}}'>删除</view>
+        </view>
+        <view class='btn' bindtap='update_video'>
+          <view class='flex-col'>
+            <image class='img' src='/images/personal/video_icon.png'></image>
+            <text class='txt'>添加视频</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='dm-title'>上传商铺图片</view>
+      <view class='bottom-line tl video-wrap'>
+        <view class='box' wx:for="{{form.imgs}}" wx:key='index'>
+          <image src='{{item}}' class='img'></image>
+          <view class='del' bindtap='del_img' data-img-index='{{index}}'>删除</view>
+        </view>
+        <view class='btn' bindtap='update_img'>
+          <view class='flex-col'>
+            <image class='img' src='/images/personal/camera_icon.png'></image>
+            <text class='txt'>添加图片</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</scroll-view>
+
+<button class='bottom-btn' bindtap='submit_form'>确定</button>

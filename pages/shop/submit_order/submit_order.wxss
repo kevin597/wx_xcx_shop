@@ -1,0 +1,70 @@
+/* pages/shop/submit_order/submit_order.wxss */
+@import '/pages/shop/address/list.wxss';
+
+page {
+  background-color: #f7f7f7;
+}
+
+.cart_list {
+  margin: 20rpx 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.submitOrder {
+  width: 270rpx;
+}
+
+.address-group .section {
+  padding: 0;
+  padding-top:12rpx;
+}
+.input-group {
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.input-group .section {
+  height: 86rpx;
+  line-height: 86rpx;
+  padding: 0 20rpx;
+  overflow: hidden;
+  font-size: 32rpx;
+  color: #999;
+}
+
+.input-group .section label {
+  width: 180rpx;
+  color: #666;
+}
+
+.ad{
+  margin: 30rpx;
+  font-size: 30rpx;
+}
+
+.shop-time{
+  padding: 0 30rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  background-color: #ffffff;
+  margin-top: -20rpx;
+  color: #309e00;
+}
+
+.select-shop {
+  position: relative;
+}
+
+.select-shop::after{
+  content: '选择门店';
+  position: absolute;
+  width: 130rpx;
+  height: 124rpx;
+  line-height: 124rpx;
+  text-align: center;
+  font-size: 22rpx;
+  top: 0;
+  right: 28rpx;
+}

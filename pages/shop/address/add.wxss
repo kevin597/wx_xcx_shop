@@ -1,0 +1,39 @@
+/* pages/shop/address/add.wxss */
+@import '/pages/shop/common.wxss';
+
+page {
+  background-color: #f7f7f7;
+  border-top: 1px solid #b3b3b3;
+}
+
+/* 文本框 */
+
+.address-group {
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.section {
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 20rpx;
+  overflow: hidden;
+  font-size: 32rpx;
+  color: #999;
+}
+
+.section label {
+  width: 180rpx;
+  color: #666;
+}
+
+.border-top {
+  border-top: 1px solid #d4d4d4;
+}
+
+.btn-area {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

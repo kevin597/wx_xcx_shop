@@ -1,0 +1,15 @@
+/* pages/user/suggest/suggest.wxss */
+@import '/pages/user/common.wxss';
+
+.text_box{
+  background-color: #fff;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.text_box textarea{
+  display: block;
+  line-height: 20px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}

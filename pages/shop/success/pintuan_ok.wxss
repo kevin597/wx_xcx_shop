@@ -1,0 +1,70 @@
+/* pages/shop/success/pintuan_ok.wxss */
+@import '/pages/shop/order/pro_order.wxss';
+
+.product_list {
+  padding-bottom: 0;
+}
+
+.ad {
+  margin: 30rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pintuan-ok {
+  background-color: #fff;
+  padding: 30rpx 0;
+}
+
+.pin-friend-ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.pin-friend-li {
+  flex: 0 0 33.33%;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 170rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pin-friend-li .pin-friend-div {
+  width: 140rpx;
+  height: 140rpx;
+  position: relative;
+}
+
+.pin-friend-li .pin-friend-img {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+
+.my-cart-num {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #f7824e;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  font-size: 24rpx;
+}
+
+.share {
+  width: 54rpx;
+  height: 48rpx;
+}

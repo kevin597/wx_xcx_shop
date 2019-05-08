@@ -1,0 +1,31 @@
+<!--pages/shop/contact/contact.wxml-->
+<view class='message message-right flex-row flex-top'>
+  <view class='message-speech'>
+    <view class='invite'>
+      你好，我想知道怎样收取母鸡。你好，我想知道怎样收取母鸡。
+    </view>
+    <view class='message-time font-size-22 text-a-r font-color-80'>2019-04-15 09:23</view>
+  </view>
+  <view class='message-user text-a-r'>
+    <image class='message-img' src='/images/default/188x188.jpg'></image>
+  </view>
+</view>
+
+<view class='message message-left flex-row flex-top'>
+  <view class='message-user text-a-l'>
+    <image class='message-img' src='/images/default/188x188.jpg'></image>
+  </view>
+  <view class='message-speech'>
+    <view class='invite'>
+      你好，很高兴为您服务，有什么问题请留言，我们稍后为您处理。
+    </view>
+    <view class='message-time font-size-22 text-a-l font-color-80'>2019-04-15 09:23</view>
+  </view>
+</view>
+
+<form bindsubmit="bindFormSubmit">
+  <view class="message-bottom flex-row top-line bottom-line">
+    <input class='flex-full message-input' bindconfirm="bindFormSubmit" name='content' />
+    <button class='message-submit' formType="submit">+</button>
+  </view>
+</form>

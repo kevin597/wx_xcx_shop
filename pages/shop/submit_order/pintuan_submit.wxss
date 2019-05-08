@@ -1,0 +1,3 @@
+/* pages/shop/submit_order/pintuan_submit.wxss */
+
+@import '/pages/shop/submit_order/submit_order.wxss';

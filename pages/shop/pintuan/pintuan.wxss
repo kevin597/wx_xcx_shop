@@ -1,0 +1,33 @@
+/* pages/shop/pintuan/pintuan.wxss */
+@import '/pages/shop/product/product.wxss';
+
+.pintuan-info-title {
+  padding-left: 70rpx;
+}
+
+.pintuan-icon {
+  width: 26rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 30rpx;
+}
+
+.pintuan-list {
+  padding: 0 30rpx;
+  border-top: 1px solid #d4d4d4;
+  height: 80rpx;
+  overflow: hidden;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #4c4c4c;
+}
+
+.pt-btn {
+  width: 140rpx;
+  height: 50rpx;
+  border: 1px solid #f7824e;
+  line-height: 50rpx;
+  border-radius: 16rpx;
+  margin-left: 20rpx;
+}

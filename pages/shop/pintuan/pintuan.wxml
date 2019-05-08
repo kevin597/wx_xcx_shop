@@ -1,0 +1,80 @@
+<!--pages/shop/pintuan/pingtuan.wxml-->
+<!--pages/shop/product/product.wxml-->
+<wxs module="filters" src="../../../filter/filter.wxs"></wxs>
+<!-- 商品主图 -->
+<view class="swiper">
+  <swiper class="swiper" bindchange="swiperChange" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+    <swiper-item wx:for="{{imgUrls}}" wx:key='index'>
+      <image wx:if="{{item.isimg}}" class="sslide_image" src="{{item.src}}"></image>
+      <video wx:else class="sslide_image" autoplay="true" loop="true" src="{{item.video}}"></video>
+    </swiper-item>
+  </swiper>
+  <view class="imageCount">{{current+1}}/{{imgUrls.length}}</view>
+</view>
+
+<!-- 商品标题 -->
+<view class='flex-row product-title'>
+  <view class='float-left font-color-red font-size-40 price flex-full'>￥{{filters.toNumber(product.price)}}</view>
+  <view class='float-left text-a-r font-size-24 buy'>总拼团{{product.buy}}件</view>
+</view>
+<view class='flex-row product-title flex-top'>
+  <view class='float-left font-size-30 title flex-full'>{{product.title}}</view>
+</view>
+
+<!-- 拼团 -->
+<view class='pintuan-info-title font-size-30'>
+  <image class="pintuan-icon" src="/images/shop/icon-pt.png"></image>
+  <text>40人正在拼团，可直接参与</text>
+  <navigator class='more font-size-26' url='../pintuan_list/ptlist'>查看更多</navigator>
+</view>
+<view class='pintuan-list flex-row' wx:for="{{pintuanlist}}" wx:key="this">
+  <text class='flex-full'>还差{{item.num}}人拼成</text>
+  <text class='flex-full font-color-80'>剩余时间:<text class='font-color-yello'>{{item.date}}</text></text>
+  <navigator class='pt-btn font-color-yello text-a-c' url='/pages/shop/submit_order/pintuan_submit' data-ptid="{{item.ptid}}">去拼单</navigator>
+</view>
+
+<!-- 商品评价 -->
+<view class='product-info-title font-size-30'>商品评价({{product.pinglun}}）
+  <navigator class='more font-size-26' url='../pinglun/pinglun'>查看更多</navigator>
+</view>
+
+<view class='flex-row pingLun flex-top' wx:for="{{pinglun}}" wx:key="this">
+  <image class='user-img' src="{{item.img}}"></image>
+  <view class='flex-full'>
+    <text class='pingLun-name font-size-30'>{{item.name}}</text>
+    <text class='pingLun-time text-a-r font-size-22'>{{item.time}}</text>
+    <view class='pingLun-title font-size-26'>{{item.content}}</view>
+    <view class='img' wx:if="{{item.src.length>0}}">
+    <video wx:if="{{item.video.length>0}}" src="{{videoitem}}" wx:for="{{item.video}}" wx:for-item="videoitem" wx:key="index"></video>
+      <image src="{{subitem}}" wx:for="{{item.src}}" wx:for-item="subitem" data-src="{{item.src}}" data-imgs='{{subitem}}' wx:key="this" bindtap="previewImg"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 商品详情 -->
+<view class='product-info-title font-size-30'>商品详情</view>
+<text class='product-info-content'>{{product.content}}</text>
+
+<!-- 商品图片 -->
+<view class='content'>
+  <image src="/images/shop/pic.jpg"></image>
+  <image src="/images/shop/pic.jpg"></image>
+  <image src="/images/shop/pic.jpg"></image>
+</view>
+
+<!-- 底部按钮 -->
+<view class='footer flex-row'>
+  <navigator class='addCart font-size-22' url='/pages/shop/cart/cart'>
+    <view class='iconfont icon-caigou-xianxing'></view>
+    <text>添加购物车</text>
+  </navigator>
+  <navigator class='contact font-size-22'>
+    <view class='iconfont icon-kefu'></view>
+    <text>联系客服</text>
+  </navigator>
+  <navigator class='goShop font-size-22' url='/pages/shop/shop/shop'>
+    <view class='iconfont icon-shop'></view>
+    <text>进入店铺</text>
+  </navigator>
+  <view bindtap='btn_submit_order' class='submitOrder font-size-32 flex-full'>提交订单</view>
+</view>

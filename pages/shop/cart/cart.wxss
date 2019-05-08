@@ -1,0 +1,78 @@
+/* pages/shop/cart/cart.wxss */
+@import '/pages/shop/common.wxss';
+
+page {
+  background-color: #f7f7f7;
+}
+
+.spec-btn {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 0;
+  width: 40rpx;
+  height: 40rpx;
+  color: #b3b3b3;
+  text-align: center;
+  line-height: 40rpx;
+  padding: 0;
+  margin: 0;
+  font-size: 24rpx;
+}
+
+.num-ipnut {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  border-left: 0 none;
+  border-right: 0 none;
+  width: 60rpx;
+  text-align: center;
+  height: 40rpx;
+  color: #4d4d4d;
+  padding: 0;
+  margin: 0;
+  min-height: 40rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
+  outline: 0 none;
+}
+
+.pro-checkbox, .is-checked {
+  position: relative;
+  visibility: hidden;
+}
+
+.pro-checkbox:before {
+  content: '';
+  position: absolute;
+  visibility: visible;
+  left: 0;
+  top: 0;
+  background-color: white;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  border: 1px solid #ccc;
+}
+
+.is-checked:before {
+  content: '✓';
+  position: absolute;
+  visibility: visible;
+  left: 0;
+  top: 0;
+  background-color: #f7824e;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  border: 1px solid #f7824e;
+  line-height: 40rpx;
+  color: white;
+  text-align: center;
+}
+
+/* 空数据 */
+
+.empty {
+  padding: 30rpx 0;
+  text-align: center;
+}

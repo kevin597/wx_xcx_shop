@@ -1,0 +1,116 @@
+<!--pages/user/store/store.wxml-->
+
+<!-- 申请商家 -->
+<view class='apply_agent' wx:if='{{type == 0}}'>
+  <view class='dm-norlist bg-w top-line bottom-line dm-mt dm-mb'>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>用户姓名</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的姓名' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>手机号</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的手机号' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>农场名称</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的农场名称' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>身份证号</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的身份证号' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>银行卡号</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的银行卡号' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>开户行</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的开户行' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>商户地址</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入商户地址' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>推荐代理人</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的推荐代理' />
+      </view>
+    </view>
+
+  </view>
+
+  <view class='card_mod h4 bg-w top-line bottom-line dm-mb'>
+    <view class='box cover' bindtap='update_str'>
+      <image wx:if='{{form.card_str}}' class='img' src='{{form.card_str}}' />
+      <view wx:else class='mod'>营业执照</view>
+    </view>
+    <view class='box cover' bindtap='update_frt'>
+      <image wx:if='{{form.card_frt}}' class='img' src='{{form.card_frt}}' />
+      <view wx:else class='mod'>身份证正面照</view>
+    </view>
+    <view class='box cover' bindtap='update_rev'>
+      <image wx:if='{{form.card_rev}}' class='img' src='{{form.card_rev}}' />
+      <view wx:else class='mod'>身份证反面照</view>
+    </view>
+  </view>
+
+  <button class='bottom-btn' bindtap='submit_form'>提交审核</button>
+
+</view>
+<!-- 申请商家 end -->
+
+<!-- 商家中心 -->
+<view class='agent_wrap' wx:else>
+  <view class='egg_top'>
+    <image class='bg' src='/images/personal/egg_bg.png'></image>
+    <view class='t1 tc pr h5'>当前鸡蛋数</view>
+    <view class='cur tc pr'>{{eggNum}}</view>
+    <view class='share flex-col' bindtap='view_code'>
+      <image class='img' src='/images/personal/share_icon.png'></image>
+      <text class='h6'>分享二维码</text>
+    </view>
+  </view>
+
+  <view class='time_tab h4 bottom-line'>
+    <view class='{{nav==index ? "time clk" : "time"}}' bindtap='time_tab' data-index='{{index}}' wx:for='{{time}}' wx:key='{{index}}'>{{item}}</view>
+  </view>
+
+  <view class='total_data dm-clearfix'>
+    <view class='list dm-left flex-col' wx:for='{{total}}' wx:key='index'>
+      <view class='box flex-col'>
+        <view class='name'>{{item.name}}</view>
+        <view class='txt'>{{item.val+item.unit}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='footer flex-row top-line tc h4'>
+    <navigator class='flex-full btn_1' url='/pages/user/decorate/decorate'>店铺装修</navigator>
+    <navigator class='flex-full btn_2' url='/pages/user/update/update'>上传商品</navigator>
+  </view>
+  
+</view>
+<!-- 商家中心 end -->

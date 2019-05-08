@@ -1,0 +1,110 @@
+<!--index.wxml-->
+<!-- 自定义顶部标题 -->
+<my-component my-property='{{navTitleText}}' />
+<!-- 背景图 -->
+<image class="page_full" src="{{page_full}}"></image>
+<!-- 头像 -->
+<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+<!-- 会员等级 -->
+<image class="userinfo-number" src="../../../images/number{{my_farm.my_grade}}.png"></image>
+
+<button bindtap="toShowModal" data-id="newsModal" data-name="消息动态" class='btn-index dongtai'></button>
+<button open-type='share' class='btn-index fenxiang'></button>
+<button bindtap="toShowModal" data-id="friendModal" data-name="好友排行" class='btn-index haoyou'></button>
+<button bindtap="openGame" data-id="userModal" data-name="会员权益" class='btn-index qiandao'></button>
+
+<navigator url='/pages/farm/index/index' class='btn-index nongchang'></navigator>
+<navigator url='/pages/shop/index/index' class='btn-index jishi'></navigator>
+<navigator url='/pages/user/index/index' class='btn-index huiyuan'></navigator>
+
+<!-- 消息框 -->
+<view class='btn-index xiaoxi'>
+  <image class="userinfo-pic" src="{{userInfo.avatarUrl}}"></image>
+  <text class='userinfo-txt'>{{my_farm.my_first_news}}</text>
+</view>
+<!-- 食物 / 鸡蛋 -->
+<text class='btn-index ny-userinfo userinfo-food'>X{{my_farm.my_food}}</text>
+<text class='btn-index ny-userinfo userinfo-egg'>X{{my_farm.my_egg}}</text>
+
+
+<!-- 选择农场下拉框 -->
+<view class='select_box'>
+  <view class='select' catchtap='selectTap'>
+    <text class='select_text'>{{selectData[index]}}</text>
+    <image class='words_img' src='../../../images/dv.png'></image>
+  </view>
+  <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+    <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+  </view>
+</view>
+
+<!-- 弹窗 -->
+<view class="modal-mask" wx:if="{{showModal}}"></view>
+<view class='modal-dialog' wx:if="{{showModal}}">
+  <image class='modal-bg-img' src='../../../images/news_box.png'></image>
+  <!-- <image class='modal-bg-top' src='../../../images/{{modal.dataID}}.png'></image> -->
+  <text class='modal-bg-top modal-top-text'>{{dataName}}</text>
+
+  <!-- 会员权益 -->
+  <block wx:if="{{modal.userModal}}">
+    <view class='modal-text-box modal-text-box-noe'>
+      <text class='modal-text-title'>200会员权益</text>
+      <text class='modal-text-content'>200会员签到领鸡蛋200会员签到领鸡蛋200会员签到领鸡蛋200会员签到领鸡蛋200会员签到领鸡蛋200会员签到领鸡蛋200会员签到领鸡蛋200会员签到领鸡蛋200会员签到领鸡蛋</text>
+    </view>
+    <view class='modal-text-box'>
+      <text class='modal-text-title'>365会员权益</text>
+      <text class='modal-text-content'>365会员养鸡计划365鸡蛋+老母鸡，预计一年能省1000元。365会员养鸡计划365鸡蛋+老母鸡，预计一年能省1000元365会员养鸡计划365鸡蛋+老母鸡，预计一年能省1000元</text>
+    </view>
+  </block>
+
+  <!-- 消息动态 -->
+  <block wx:elif="{{modal.newsModal}}">
+    <scroll-view scroll-y class='mt180'>
+      <view class='flex-row' wx:for="{{news}}" wx:key="index">
+        <view class='news-hand'>
+          <image class='news-hand-img' src='/images/farm/news_hand.png'></image>
+        </view>
+        <view class='modal-text-box news-h'>
+          <view class='news-time'>{{item.time}}</view>
+          <view class='news-title'>{{item.title}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+
+  <!-- 好友排行 -->
+  <block wx:elif="{{modal.friendModal}}">
+    <scroll-view scroll-y class='mt180'>
+      <view class='modal-text-box h100 mb30 flex-row' wx:for="{{friend}}" wx:key="index">
+        <image wx:if="{{index<3}}" class='userinfo-top' src='/images/farm/top{{index+1}}.png'></image>
+        <view wx:else class='friend-top'>{{index+1}}</view>
+        <image class='userinfo-img' src='{{item.photo}}'></image>
+        <view class='flex-full'>{{item.name}}</view>
+        <view wx:if="{{item.statu==1}}" class=''>
+          <image class='userinfo-hand' src='/images/farm/hand.png'></image>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+
+  <!-- 关闭弹窗 -->
+  <button class='modal-btn-hide' data-id="{{dataID}}" bindtap="tohideModal"></button>
+</view>
+
+
+<!-- 幸运大转盘 -->
+<view class='wheel_wrap' catchtouchmove="preventTouchMove" wx:if='{{showGame}}'>
+  <view class='mask'></view>
+  <view class='wheel_mod'>
+    <image class='close' bindtap='closeGame' src='/images/farm/close_btn.png'></image>
+    <image class='bg' src='/images/farm/wheel_bg.png'></image>
+    <image class='main' style='transform:rotate({{rotate}}deg);' src='/images/farm/wheel_main.png'></image>
+    <image class='arrow' bindtap='openStart' src='/images/farm/wheel_arrow.png'></image>
+  </view>
+</view>
+<!-- 幸运大转盘 end -->
+
+
+
+
+<!-- <view wx:if="{{isIphoneX}}">{{isIphoneX}}</view> -->

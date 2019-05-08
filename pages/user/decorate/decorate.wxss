@@ -1,0 +1,109 @@
+/* pages/user/decorate/decorate.wxss */
+@import '/pages/user/common.wxss';
+
+.decorate_wrap{
+  overflow: hidden;
+}
+
+.store_photo .photo{
+  width: 75px;
+  height: 56px;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.store_photo .photo .img{
+  display: block;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+.store_photo .photo .btn{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+.store_photo .photo .btn::before{
+  content: '';
+  width:20px;
+  height: 4px;
+  background-color: #cccccc;
+  position: absolute;
+  left:0;
+  top:50%;
+  margin-top: -2px;
+}
+.store_photo .photo .btn::after{
+  content: '';
+  width: 4px;
+  height: 20px;
+  background-color: #cccccc;
+  position: absolute;
+  left:50%;
+  top:0;
+  margin-left: -2px;
+}
+
+
+/* 上传视频 */
+.video-wrap{
+  margin:0 30rpx;
+  font-size: 0;
+  overflow: hidden;
+  padding-bottom: 10rpx;
+}
+.video-wrap .box,.video-wrap .btn{
+  display: inline-block;
+  width: 210rpx;
+  height: 210rpx;
+  margin-bottom:20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  vertical-align:middle;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  overflow: hidden;
+  position: relative;
+}
+.video-wrap .box{
+  background-color: #ddd;
+}
+.video-wrap .box .img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-object-fit: cover;
+  object-fit: cover;
+}
+.video-wrap .box .del{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.video-wrap .btn{
+  border: 1px dashed #bbb;
+}
+.video-wrap .btn .flex-col{
+  height: 100%;
+}
+.video-wrap .btn .img{
+  width: 64rpx;
+  height: 64rpx;
+}
+.video-wrap .btn .txt{
+  font-size: 26rpx;
+  margin-top: 16rpx;
+  color: #999;
+}

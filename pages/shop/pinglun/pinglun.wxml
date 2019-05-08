@@ -1,0 +1,12 @@
+<!--pages/shop/pinglun/pinglun.wxml-->
+<view class='flex-row pingLun flex-top' wx:for="{{pinglun}}" wx:key="this">
+  <image class='user-img' src="{{item.img}}"></image>
+  <view class='flex-full'>
+    <text class='pingLun-name font-size-30'>{{item.name}}</text>
+    <text class='pingLun-time text-a-r font-size-22'>{{item.time}}</text>
+    <view class='pingLun-title font-size-26'>{{item.content}}</view>
+    <view class='img' wx:if="{{item.src.length>0}}">
+      <image src="{{subitem}}" wx:for="{{item.src}}" wx:for-item="subitem" data-src="{{item.src}}" data-imgs='{{subitem}}' wx:key="this" bindtap="previewImg"></image>
+    </view>
+  </view>
+</view>

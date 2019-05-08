@@ -1,0 +1,13 @@
+<!--pages/shop/prolist/prolist.wxml-->
+<view class='product_list_ul'>
+  <view class='product_list_li' wx:for="{{productList}}" wx:key="{{item.proid}}" wx:for-index="idx" bindtap='skip_product' data-proid='{{item.proid}}'>
+    <image src="{{item.src}}" class="pro_list_img" id="{{idx}}"></image>
+    <view class='pro_list_title'>{{item.date}}</view>
+    <view class='pro_list_info'>
+      <text class='width60 font-size-28'>{{item.title}}</text>
+      <text class='width40 font-size-24 text-a-r'>{{item.count}}人拼团</text>
+      <text class='width40 font-size-32 font-color-red'>{{item.price}}</text>
+      <text class='width60 text-a-r font-size-22'>总拼团{{item.total}}件</text>
+    </view>
+  </view>
+</view>

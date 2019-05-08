@@ -1,0 +1,42 @@
+/* pages/shop/success/success.wxss */
+@import '/pages/shop/common.wxss';
+.group{
+  height: 450rpx;
+  position: relative;
+}
+
+.success_bg {
+  width: 750rpx;
+  height: 300rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.success_text{
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.success_btn{
+  margin: 60rpx auto;
+  padding: 0 20rpx;
+}
+
+.success_btn navigator{
+  width: 45%;
+  border-radius: 50rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 0 10rpx;
+}
+
+.btn-back {
+  color: #f7824e;
+  border: 1px solid #f7824e;
+}

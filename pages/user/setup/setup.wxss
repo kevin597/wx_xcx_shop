@@ -1,0 +1,5 @@
+/* pages/user/setup/setup.wxss */
+@import '/pages/user/common.wxss';
+page{
+  overflow: hidden;
+}

@@ -1,0 +1,41 @@
+<!--pages/user/vip/vip_renew.wxml-->
+
+<scroll-view scroll-y='true' style="width:100%;height:calc(100% - 46px)">
+
+  <!-- 会员类别 -->
+  <view class='vip_mod dm-clearfix'>
+    <view bindtap='sel_vip' class='{{item.id == form.vipId ? "box dm-left clk" : "box dm-left"}}' wx:for="{{vip}}" wx:key="index" data-vip-id="{{item.id}}">
+      <image class='bg' src='/images/personal/renew_bg.jpg'></image>
+      <view class='name'>{{item.name}}</view>
+      <image class='dot' src='/images/personal/renew_clk.png'></image>
+    </view>
+  </view>
+
+  <view class='dm-norlist bg-w top-line bottom-line' style='margin-bottom:20px;'>
+    <picker value='{{index}}' range='{{fram_list}}' bindchange='sel_fram'>
+      <view class='list flex-row bottom-line arrow_gray'>
+        <view class='name'>选择开通农场</view>
+        <view class='cot flex-full tr nowrap'>{{form.fram ? form.fram : '请选择'}}</view>
+      </view>
+    </picker>
+    <view class='list flex-row bottom-line'>
+      <view class='name'>选择开通年数</view>
+      <view class='cot flex-full dm-clearfix nowrap'>
+        <view class='operate_box inline tr dm-right'>
+          <view class='reduce_btn' bindtap='reduce_num'></view>
+          <view class='num tc'>{{form.year}}</view>
+          <view class='add_btn' bindtap='add_num'></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='oth_txt h5'>开通365会员，预计{{form.year}}年获得{{365*form.year}}鸡蛋+{{1*form.year}}只老母鸡</view>
+
+</scroll-view>
+
+
+<view class='bottom_mod top-line flex-row'>
+  <view class='flex-full val'>总价：<text class='main_color'>￥365</text></view>
+  <view class='btn'>立即开通/续费</view>
+</view>

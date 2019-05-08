@@ -1,0 +1,4 @@
+<!--pages/user/aggress/aggress.wxml-->
+<view class='detail_richTxt'>
+  这里是相关协议的内容
+</view>

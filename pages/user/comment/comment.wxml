@@ -1,0 +1,23 @@
+<!--pages/user/comment/comment.wxml-->
+<view class='comment_wrap' wx:for="{{pinglun}}" wx:key="index">
+  <view class='flex-row pingLun flex-top'>
+    <image class='user-img' src="{{item.img}}"></image>
+    <view class='flex-full'>
+      <text class='pingLun-name font-size-30'>{{item.name}}</text>
+      <text class='pingLun-time text-a-r font-size-22'>{{item.time}}</text>
+      <view class='pingLun-title font-size-26'>{{item.content}}</view>
+      <view class='img' wx:if="{{item.src.length>0}}">
+        <image src="{{subitem}}" wx:for="{{item.src}}" wx:for-item="subitem" data-src="{{item.src}}" data-imgs='{{subitem}}' wx:key="this" bindtap="previewImg"></image>
+      </view>
+    </view>
+  </view>
+  <view class='order_mod flex-row'>
+    <view class='photo'>
+      <image class='img' src='{{item.order.photo}}'></image>
+    </view>
+    <view class='flex-full info'>
+      <view class='name'>{{item.order.name}}</view>
+      <view class='val'>￥{{item.order.val}}</view>
+    </view>
+  </view>
+</view>

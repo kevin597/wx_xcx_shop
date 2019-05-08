@@ -1,0 +1,52 @@
+<!--pages/user/goods_order/goods_order.wxml-->
+
+<!-- 状态切换 -->
+<orderNav nav='{{nav}}' statu='{{statu}}' bindtabNav='nav_tab'></orderNav>
+
+<view style='width:100%;padding-top:44px;'>
+  
+  <view class='order_mod' wx:if='{{order.length > 0}}'>
+    <view class='order_list' wx:for='{{order}}' wx:key='item.id'>
+      <view class='order_top flex-row bottom-line'>
+        <view class='flex-full dm-clearfix'>
+          <view class='store arrow_gray dm-left'>{{item.store}}</view>
+        </view>
+        <view class='statu tr'>
+          <block wx:if='{{item.statu == 1}}'>待付款</block>
+          <block wx:elif='{{item.statu == 2}}'>待发货</block>
+          <block wx:elif='{{item.statu == 3}}'>待收货</block>
+          <block wx:elif='{{item.statu == 4}}'>待评价</block>
+          <block wx:elif='{{item.statu == 5}}'><text>已完成</text></block>
+          <block wx:else><text>已取消</text></block>
+        </view>
+      </view>
+      <view class='goods_list bottom-line' bindtap='skip_dtl' data-order-id='{{item.id}}'>
+        <view class='box flex-row' wx:for='{{item.goods}}' wx:key='item.id' wx:if='{{index == 0}}'>
+          <view class='photo cover'>
+            <image class='img' src='{{item.photo}}'></image>
+          </view>
+          <view class='info flex-full'>
+            <view class='name'>{{item.name}}</view>
+            <view class='oth dm-clearfix'>
+              <view class='dm-left money'>￥{{item.single}}</view>
+              <view class='dm-right num'>x{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='total_val tr'>共计：<text class='val'>￥100.00</text>实付：<text class='val'>￥100.00</text></view>
+      <view class='btn_box top-line tr' wx:if='{{item.statu != 5 && item.statu != 6}}'>
+        <view class='btn btn_2' bindtap='cancel_order' data-order-id='{{item.id}}' wx:if="{{item.statu == 1}}">取消订单</view>
+        <view class='btn btn_1' bindtap='pay' data-order-id='{{item.id}}' wx:if="{{item.statu == 1}}">立即支付</view>
+        <view class='btn btn_1' bindtap='contact' data-order-id='{{item.id}}' wx:elif="{{item.statu == 2}}">联系客服</view>
+        <view class='btn btn_1' bindtap='enter_order' data-order-id='{{item.id}}' wx:elif="{{item.statu == 3}}">确认收货</view>
+        <view class='btn btn_1' bindtap='comment_order' data-order-id='{{item.id}}' wx:else>立即评价</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='empty' wx:else>
+    <view class='h5'>暂无任何数据</view>
+  </view>
+
+</view>

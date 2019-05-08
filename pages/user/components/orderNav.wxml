@@ -1,0 +1,6 @@
+<!--pages/user/components/orderNav.wxml-->
+<view class='statu_tab top-line'>
+  <view class='flex-row h4 tc'>
+    <view bindtap='nav_tab' class='{{nav==item.type ? "tab flex-full clk" : "tab flex-full"}}' wx:for="{{statu}}" wx:key="item.type" data-statu-id="{{item.type}}">{{item.name}}</view>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+<!--pages/shop/cart/cart.wxml-->
+
+<view class='cart' wx:if='{{order.length > 0}}'>
+  <radio-group bindchange="radioChange">
+    <view class='cart_list' wx:for='{{order}}' wx:key='item.id'>
+
+      <view class='cart_top bottom-line flex-row'>
+        <radio class='all-radio' value="{{item.id}}"></radio>
+        <navigator url='../shop/shop?id={{item.id}}' class='flex-full font-size-28 font-color-33'>{{item.store}}</navigator>
+        <view class='iconfont icon-delete font-size-44 font-color-80' bindtap="del_cart" data-index="{{index}}"></view>
+      </view>
+
+      <view class='product_list'>
+        <checkbox-group bindchange="checkboxChange">
+          <view class='pro-box flex-row' wx:for='{{item.goods}}' wx:for-item="goods" wx:key='goods.id'>
+            <!-- <checkbox class='{{goods.selected?"is-checked":"pro-checkbox"}}' data-id="{{item.id}}" value="{{goods.id}}"></checkbox> -->
+            <checkbox value="{{goods.id}}"></checkbox>
+            <view class='pro-photo'>
+              <image class='pro-img' src='{{goods.photo}}'></image>
+            </view>
+            <view class='pro-info flex-full'>
+              <view class='name font-size-28 font-color-33'>{{goods.name}}</view>
+              <view class='sub-name font-size-24 font-color-80'>{{goods.name}}</view>
+              <view class='pro-price flex-row'>
+                <view class='flex-full font-size-34 font-color-red'>￥{{goods.single}}</view>
+                <view class='pro-num flex-row'>
+                  <view class="add-btn spec-btn" bindtap="cut" data-id="{{item.id}}" data-index="{{index}}">-</view>
+                  <input class="num-ipnut" type="number" value="{{goods.num}}" bindinput="inputVl" />
+                  <view class="cut-btn spec-btn" bindtap="add" data-id="{{item.id}}" data-index="{{index}}">+</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </checkbox-group>
+      </view>
+
+    </view>
+  </radio-group>
+</view>
+
+<view class='empty font-size-30 font-color-80' wx:else>购物车是空的哦~</view>
+
+
+<!-- 底部按钮 -->
+<view class='footer flex-row'>
+  <view class='font-size-30 flex-full text-a-c'>
+    <text class='font-color-33'>合计:</text>
+    <text class='font-color-red'>￥{{totalPrice}}</text>
+    <text class='font-color-80'>(免运费)</text>
+  </view>
+  <view wx:if="{{selectedNum != 0}}" bindtap='btn_submit_order' class='submitOrder font-size-32 flex-full'>去结算</view>
+
+  <view wx:else class="submitOrder font-size-32 flex-full disabled">去结算({{selectedNum}})</view>
+
+</view>

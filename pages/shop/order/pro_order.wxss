@@ -1,0 +1,130 @@
+/* pages/shop/order/product.wxss */
+@import '/pages/shop/prolist/prolist.wxss';
+
+page {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.order-top {
+  overflow: hidden;
+  position: relative;
+  height: 200rpx;
+}
+
+.order-top .img {
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.order-top .cart {
+  width: 96rpx;
+  height: 96rpx;
+  position: absolute;
+  top: 50%;
+  right: 80rpx;
+  margin-top: -48rpx;
+}
+
+.order-top .text {
+  width: 500rpx;
+  height: 150rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 80rpx;
+  text-align: left;
+  color: #fff;
+}
+
+.isGoods {
+  line-height: 80rpx;
+}
+
+.order-box {
+  background-color: white;
+  height: 160rpx;
+  padding: 0 30rpx;
+  line-height: 46rpx;
+}
+
+.box-left {
+  width: 80rpx;
+  height: 160rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.box-left .img {
+  width: 60rpx;
+  height: 40rpx;
+}
+
+.cart_list {
+  margin: 20rpx 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.pay-box {
+  padding: 20rpx 30rpx;
+  background-color: white;
+}
+
+.flex-left {
+  width: 24%;
+  line-height: 50rpx;
+  overflow: hidden;
+}
+
+.submitOrder {
+  width: 270rpx;
+}
+
+.yourLikeTitle {
+  height: 96rpx;
+  position: relative;
+}
+
+.yourLikeTitle:after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  left: 10%;
+  top: 50%;
+  background-color: #ccc;
+}
+
+.yourLikeTitle .like-love {
+  position: absolute;
+  left: 50%;
+  top: 27rpx;
+  width: 42rpx;
+  height: 42rpx;
+  z-index: 9999;
+  display: block;
+  margin-left: -80rpx;
+}
+
+.yourLikeTitle .like-text {
+  position: absolute;
+  left: 50%;
+  top: 23rpx;
+  margin-left: -100rpx;
+  width: 210rpx;
+  height: 50rpx;
+  background-color: #f7f7f7;
+  text-align: center;
+  line-height: 50rpx;
+  text-indent: 2em;
+  z-index: 9990;
+}
+
+.yourLike {
+  background-color: white;
+  padding: 30rpx 0;
+}

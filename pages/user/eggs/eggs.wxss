@@ -1,0 +1,41 @@
+/* pages/user/eggs/eggs.wxss */
+@import '/pages/user/common.wxss';
+
+.egg_top{
+  background: -webkit-linear-gradient(#f15c6c,#f7824e);
+  background: linear-gradient(#f15c6c,#f7824e);
+  position: relative;
+  padding: 20px 12px 15px 12px;
+}
+.egg_top .bg{
+  position: absolute;
+  top:0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.egg_top .pr{
+  position: relative;
+  color: #fff;
+}
+.egg_top .cur{
+  font-size: 32px;
+  font-weight: 700;
+}
+.egg_top .wrap{
+  padding-top: 5px;
+}
+.egg_top .wrap .val{
+  display: block;
+  line-height: 1.2;
+  margin-top: 8px;
+}
+
+.detail .time{
+  color: #999;
+}
+.detail .money{
+  color:#333;
+  font-weight: 700;
+}

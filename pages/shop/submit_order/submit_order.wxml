@@ -1,0 +1,98 @@
+<!--pages/shop/submit_order/submit_order.wxml-->
+<!-- tab选项卡 -->
+<view class="swiper-tab">
+  <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">物流配送</view>
+  <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">门店自提</view>
+</view>
+
+<view class='swiper' wx:if="{{currentTab==0}}">
+  <navigator url='../address/list' class='address-group arrow_gray margin-20'>
+    <view class="section flex-row">
+      <text class='address-name font-size-30'>{{address.name}}</text>
+      <text class='flex-full font-size-28'>{{address.tel}}</text>
+      <text wx:if="{{address.switch}}" class='address-default font-size-24 text-a-c'>默认</text>
+    </view>
+    <view class="section flex-row">
+      <text class='address-address flex-full font-size-28'>{{address.region}}{{address.address}}</text>
+    </view>
+  </navigator>
+</view>
+
+<view class='swiper' wx:if="{{currentTab==1}}">
+  <navigator url='../address/list' class='address-group arrow_gray select-shop margin-20'>
+    <view class="section flex-row">
+      <text class='address-name flex-full font-size-30'>{{shopAddress.name}}</text>
+    </view>
+    <view class="section flex-row">
+      <text class='address-address flex-full font-size-28'>{{shopAddress.address}}</text>
+    </view>
+  </navigator>
+  <view class='shop-time top-line flex-row'>
+    <view class='font-color-33 font-size-28'>自提时间</view>
+    <view class='flex-full font-size-24 text-a-r'>( {{time}} 16:00-20:00 ) </view>
+  </view>
+</view>
+
+
+<!-- 订单列表 -->
+<view class='cart_list'>
+  <view class='cart_top bottom-line flex-row'>
+    <view class='flex-full font-size-28 font-color-33'>{{order.store}}</view>
+  </view>
+  <view class='product_list'>
+    <view class='pro-box flex-row' wx:for='{{order.goods}}' wx:for-item="goods" wx:key='goods.id'>
+      <view class='pro-photo'>
+        <image class='pro-img' src='{{goods.photo}}'></image>
+      </view>
+      <view class='pro-info flex-full'>
+        <view class='name font-size-28 font-color-33'>{{goods.name}}</view>
+        <view class='sub-name'></view>
+        <view class='pro-price flex-row'>
+          <view class='flex-full font-size-34 font-color-red'>￥{{goods.single}}</view>
+          <view class='pro-num font-size-28 font-color-66'>X{{goods.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='cart_top top-line text-a-r font-size-28'>
+    <text>共{{order.goods.length}}件 小计:</text>
+    <text class='font-color-red'>￥{{totalPrice}}</text>
+  </view>
+</view>
+
+
+<view class='input-group'>
+  <view class="section flex-row">
+    <label class='font-size-30'>备注</label>
+    <input class="flex-full font-size-30" name="name" placeholder="请备注您的要求" />
+  </view>
+  <view class="section border-top flex-row">
+    <label class='font-size-30'>200会员权益</label>
+    <input disabled class="font-size-28 flex-full text-a-r" placeholder="赠送20鸡蛋" />
+  </view>
+</view>
+
+<view class='input-group'>
+  <view class="section flex-row">
+    <label class='font-size-30'>包装费</label>
+    <input disabled class="flex-full text-a-r" name="name" placeholder="￥10.00" />
+  </view>
+  <view class="section border-top flex-row">
+    <label class='font-size-30'>运费</label>
+    <input disabled class="font-size-28 flex-full text-a-r" placeholder="免邮" />
+  </view>
+</view>
+
+<navigator url='/pages/user/vip/vip' class='ad bg-linear2'>开通365会员，可赠送30个鸡蛋</navigator>
+
+<view class='cart'></view>
+
+<!-- 底部按钮 -->
+<view class='footer flex-row'>
+  <view class='font-size-30 flex-full text-a-c'>
+    <text class='font-color-33'>共{{order.goods.length}}件 合计:</text>
+    <text class='font-color-red'>￥{{totalPrice}}</text>
+    <text class='font-color-80'>(免运费)</text>
+  </view>
+  <view bindtap='pay_submit_order' class='submitOrder font-size-32'>立即支付</view>
+</view>

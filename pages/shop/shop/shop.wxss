@@ -1,0 +1,34 @@
+/* pages/shop/shop/shop.wxss */
+@import '/pages/shop/prolist/prolist.wxss';
+
+.page_bg {
+  width: 750rpx;
+  height: 290rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.shop-title {
+  height: 140rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.shop-img {
+  width: 150rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+
+.shop-name {
+  color: #fff;
+}
+
+.content image,.content video {
+  display: block;
+  width: 100%;
+  margin: 10rpx auto;
+}

@@ -1,0 +1,54 @@
+/* pages/user/agent/agent.wxss */
+@import '/pages/user/common.wxss';
+@import '/pages/user/chicken/chicken.wxss';
+
+/* 申请代理商 */
+.apply_agent,.agent_wrap{
+  overflow: hidden;
+  padding-bottom: 46px;
+}
+.apply_agent .card_mod{
+  overflow: hidden;
+  padding: 3px 0;
+}
+.apply_agent .card_mod .box{
+  width:550rpx;
+  height: 312rpx;
+  text-align: center;
+  margin: 12px auto;
+  border: 1px dashed #ddd;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  position: relative;
+}
+.apply_agent .card_mod .box .mod{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: #888;
+  padding-bottom:50px;
+}
+.apply_agent .card_mod .box .mod::before{
+  content:'';
+  position: absolute;
+  width: 36px;
+  height: 8px;
+  background-color: #cccccc;
+  left: 50%;
+  bottom: 14px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.apply_agent .card_mod .box .mod::after{
+  content:'';
+  position: absolute;
+  height: 36px;
+  width: 8px;
+  background-color: #cccccc;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}

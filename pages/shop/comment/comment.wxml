@@ -1,0 +1,37 @@
+<!--pages/shop/comment/pic.wxml-->
+
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+
+    <textarea placeholder="请输入您对购买商品的评价" name="content" />
+
+    <!-- 上传图片 -->
+    <view class="img-v">
+      <!-- 上传的图片列表 -->
+      <view class="img" wx:for="{{imgs}}"  wx:key="*this">
+        <image src="{{item}}" data-index="{{index}}" bindtap="previewImg"></image>
+        <view class="delete-btn font-size-24" data-index="{{index}}" catchtap="deleteImg">删除</view>
+      </view>
+
+      <!-- 视频 -->
+      <view class="img" wx:for="{{videos}}" wx:key="*this">
+        <video class="video_item" src="{{item}}" data-index="{{index}}"></video>
+        <view class="delete-btn font-size-24" data-index="{{index}}" catchtap="deleteVideo">删除</view>
+      </view>
+
+      <!-- 添加图片按钮 -->
+      <view class="upload-img-btn" wx:if="{{imgs.length < 9}}" data-gid="imgs" bindtap="chooseImg">
+        <image class='addimg display-back' src='/images/personal/camera_icon.png'></image>
+        <text class='addtxt font-size-26 display-back'>添加图片</text>
+      </view>
+
+      <view class="upload-img-btn" wx:if="{{imgs.length < 9}}" data-gid="imgs" bindtap="chooseVideo">
+        <image class='addimg display-back' src='/images/personal/video_icon.png'></image>
+        <text class='addtxt font-size-26 display-back'>添加视频</text>
+      </view>
+
+    </view>
+
+    <button class='submit font-size-32' form-type="submit">确认评价</button>
+  </form>
+</view>

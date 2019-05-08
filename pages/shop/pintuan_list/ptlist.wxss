@@ -1,0 +1,2 @@
+/* pages/shop/prolist/prolist.wxss */
+@import '/pages/shop/common.wxss';

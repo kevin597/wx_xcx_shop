@@ -1,0 +1,21 @@
+<!--pages/user/setup/setup.wxml-->
+<view class='dm-norlist bg-w top-line bottom-line dm-mt dm-mb'>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/user/about/about'>
+    <view class='name flex-full'>关于我们</view>
+  </navigator>
+  <view class='list arrow_gray flex-row bottom-line'>
+    <view class='name flex-full'>清除缓存</view>
+  </view>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/user/aggress/aggress'>
+    <view class='name flex-full'>代理商协议</view>
+  </navigator>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/user/aggress/aggress'>
+    <view class='name flex-full'>商家协议</view>
+  </navigator>
+</view>
+
+<view class='dm-norlist bg-w top-line bottom-line dm-mt dm-mb'>
+  <view class='list flex-row bottom-line'>
+    <view class='cot'>退出登录</view>
+  </view>
+</view>

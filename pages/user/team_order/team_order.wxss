@@ -1,0 +1,2 @@
+/* pages/user/team_order/team_order.wxss */
+@import '/pages/user/common.wxss';

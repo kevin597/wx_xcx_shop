@@ -1,0 +1,3 @@
+/* pages/user/update/update.wxss */
+@import '/pages/user/common.wxss';
+@import '/pages/user/decorate/decorate.wxss';

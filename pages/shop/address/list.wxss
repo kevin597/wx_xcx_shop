@@ -1,0 +1,57 @@
+/* pages/shop/address/list.wxss */
+@import '/pages/shop/address/add.wxss';
+
+/* 地址列表 */
+
+.address-group {
+  padding: 0 24rpx;
+  overflow: hidden;
+  background-color: #fff;
+  height: 124rpx;
+}
+
+.address-name {
+  width: 150rpx;
+  color: #333;
+  text-align: left;
+}
+
+.address-default {
+  width: 80rpx;
+  height: 34rpx;
+  color: #fff;
+  background-color: #f7824e;
+  border-radius: 40rpx;
+  line-height: 34rpx;
+  margin-right: 40rpx;
+}
+
+.section {
+  height: 40rpx;
+  line-height: 50rpx;
+  padding-top: 12rpx;
+  overflow: hidden;
+  text-align: left;
+}
+
+.address-update {
+  width: 34rpx;
+  height: 33rpx;
+}
+
+.address-address {
+  color: #4c4c4c;
+  text-align: left;
+}
+
+.address-add {
+  position: relative;
+}
+
+.address-add:before {
+  content: '+ ';
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+}

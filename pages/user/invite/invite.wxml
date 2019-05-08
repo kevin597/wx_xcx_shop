@@ -1,0 +1,15 @@
+<!--pages/user/invite/invite.wxml-->
+<view class='invite_wrap'>
+  <view class='invite_top flex-row'>
+    <view class='photo'>
+      <image class='img' src='{{user.photo}}'></image>
+    </view>
+    <view class='flex-full h4'>{{user.name}}</view>
+  </view>
+  <view class='code_box'>
+    <view class='code'>
+      <image class='img' src='{{user.code}}'></image>
+    </view>
+    <view class='tc h4'>扫一扫二维码加我好友</view>
+  </view>
+</view>

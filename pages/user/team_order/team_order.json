@@ -1,0 +1,11 @@
+{
+  "navigationStyle": "default",
+  "navigationBarTitleText": "团购订单",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "orderNav": "/pages/user/components/orderNav"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

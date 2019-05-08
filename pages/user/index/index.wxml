@@ -1,0 +1,92 @@
+<!--pages/user/index/index.wxml-->
+
+<!-- 用户模块 -->
+<view class="person_info">
+  <image class='ps_bg' src='/images/personal/personal_bg.png'></image>
+  <!-- 用户信息 -->
+  <view class='person_mod arrow_white flex-row'>
+    <view class="photo cover">
+      <image class='img' src='{{user.photo}}'></image>
+    </view>
+    <view class='info flex-full'>
+      <view class='name h4 nowrap'>{{user.name}}</view>
+      <view class='level h6'>会员等级：{{user.level}}</view>
+    </view>
+    <view class='share flex-col' bindtap='view_code'>
+      <view class='icon cover'>
+        <image class='img' src='/images/personal/share_icon.png'></image>
+      </view>
+      <view class='txt h6'>分享二维码</view>
+    </view>
+  </view>
+  <!-- 用户信息 end -->
+  
+  <!-- 相关信息 -->
+  <view class='oth_mod flex-row'>
+    <navigator class='link flex-full tc' url='/pages/shop/cart/cart'>
+      <view class='name h5'>购物车</view>
+      <view class='val h5'>{{shopCarNum}}件</view>
+    </navigator>
+    <navigator class='link flex-full tc' url='/pages/user/eggs/eggs'>
+      <view class='name h5'>鸡蛋数</view>
+      <view class='val h5'>{{user.eggNum}}个</view>
+    </navigator>
+    <navigator class='link flex-full tc' url='/pages/user/chicken/chicken'>
+      <view class='name h5'>老母鸡</view>
+      <view class='val h5'>{{user.chickenNum}}只</view>
+    </navigator>
+    <navigator class='link flex-full tc' url='/pages/user/vip/vip'>
+      <view class='name h5'>会员到期</view>
+      <view class='val h5'>{{user.levelTime}}天</view>
+    </navigator>
+  </view>
+  <!-- 相关信息 end -->
+
+</view>
+<!-- 用户模块 end -->
+
+<!-- 订单入口 -->
+<view class='order_link flex-row tc bg-w h4'>
+  <navigator class='flex-full link' url='/pages/user/goods_order/goods_order'>商品订单</navigator>
+  <navigator class='flex-full link' url='/pages/user/team_order/team_order'>团购订单</navigator>
+</view>
+<!-- 订单入口 end -->
+
+<!-- 功能列表 -->
+<view class='dm-norlist top-line bottom-line bg-w dm-mt'>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/user/self_order/self_order'>
+    <view class='name flex-full'>自提订单</view>
+  </navigator>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/shop/address/list'>
+    <view class='name flex-full'>收货地址</view>
+  </navigator>
+  <navigator class='list arrow_gray flex-row' url='/pages/user/comment/comment'>
+    <view class='name flex-full'>我的评价</view>
+  </navigator>
+</view>
+
+<view class='dm-norlist top-line bottom-line bg-w dm-mt'>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/user/agent/agent'>
+    <view class='name flex-full'>代理商中心</view>
+  </navigator>
+  <navigator class='list arrow_gray flex-row' url='/pages/user/store/store'>
+    <view class='name flex-full'>商家中心</view>
+  </navigator>
+</view>
+
+<view class='dm-norlist top-line bottom-line bg-w dm-mt dm-mb'>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/user/invite/invite'>
+    <view class='name flex-full'>邀请好友</view>
+  </navigator>
+  <view class='list arrow_gray flex-row bottom-line'>
+    <button open-type='contact' style='width:100%;height:100%;position:absolute;opacity:0;'>联系客服</button>
+    <view class='name flex-full'>联系客服</view>
+  </view>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/user/suggest/suggest'>
+    <view class='name flex-full'>意见反馈</view>
+  </navigator>
+  <navigator class='list arrow_gray flex-row' url='/pages/user/setup/setup'>
+    <view class='name flex-full'>更多设置</view>
+  </navigator>
+</view>
+<!-- 功能列表 end -->

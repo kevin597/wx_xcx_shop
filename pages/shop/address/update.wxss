@@ -1,0 +1,2 @@
+/* pages/shop/address/update.wxss */
+@import '/pages/shop/address/add.wxss';

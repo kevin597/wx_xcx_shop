@@ -1,0 +1,19 @@
+<!--pages/shop/address/list.wxml-->
+
+<view class='address-group' wx:for="{{address}}" wx:key="this">
+  <view class="section flex-row">
+    <text class='address-name font-size-30'>{{item.name}}</text>
+    <text class='flex-full font-size-28'>{{item.tel}}</text>
+    <text wx:if="{{item.switch}}" class='address-default font-size-24 text-a-c'>默认</text>
+  </view>
+  <view class="section flex-row">
+    <text class='address-address flex-full font-size-28'>{{item.region}}{{item.address}}</text>
+    <navigator url='update'>
+      <image class="address-update" src='/images/shop/icon-update.png'></image>
+    </navigator>
+  </view>
+</view>
+
+<view class="btn-area">
+  <navigator url='add' class="address-add text-a-c bg-linear">添加地址</navigator>
+</view>

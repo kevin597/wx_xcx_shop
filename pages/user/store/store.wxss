@@ -1,0 +1,49 @@
+/* pages/user/store/store.wxss */
+@import '/pages/user/agent/agent.wxss';
+
+page{
+  background-color: #fff;
+}
+
+.time_tab{
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 15px;
+}
+.time_tab .time{
+  float: left;
+  line-height: 44px;
+  color: #555;
+  padding: 0 15px;
+}
+.time_tab .time.clk{
+  color: #f7824e;
+  position: relative
+}
+.time_tab .time.clk:after{
+  content: '';
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #f7824e;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.total_data{
+  padding:30rpx 20rpx 50px 20rpx;
+}
+.total_data .list{
+  width: 33.3333333333%;
+}
+.total_data .list .box{
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  color: #f7824e;
+  font-size: 14px;
+  line-height: 1.6;
+  box-shadow: 0 0 20px rgba(247,130,78,.5);
+  margin:30rpx auto;
+}

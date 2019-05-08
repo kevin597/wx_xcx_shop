@@ -1,0 +1,33 @@
+/* pages/shop/search/search.wxss */
+@import '/pages/shop/prolist/prolist.wxss';
+
+.search-form {
+  margin: 20rpx auto;
+  height: 70rpx;
+  overflow: hidden;
+}
+
+.search-bell, .search-search {
+  width: 90rpx;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  display: block;
+  float: left;
+}
+
+.search {
+  height: 70rpx;
+  background-color: #f7f7f7;
+  border-radius: 50rpx;
+  margin-left: 20rpx;
+  overflow: hidden;
+}
+
+.search-input {
+  height: 70rpx;
+  display: block;
+  float: left;
+  width: 540rpx;
+  font-size: 32rpx;
+}

@@ -1,0 +1,4 @@
+<!--pages/user/about/about.wxml-->
+<view class='detail_richTxt'>
+  这里是关于我们的内容
+</view>

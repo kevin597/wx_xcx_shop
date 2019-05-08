@@ -1,0 +1,10 @@
+<!--pages/shop/success/success.wxml-->
+<view class="group flex-row">
+  <image src="/images/shop/bg_xx.png" class="success_bg display-block"></image>
+  <icon class="success_img" type="success" size="80" color="#f7824e" />
+  <text class="success_text font-size-32">恭喜您，下单成功</text>
+</view>
+<view class="success_btn flex-row">
+  <navigator url='../../shop/index/index' class="btn-back font-size-32">返回首页</navigator>
+  <navigator url='../order/pro_order' class='bg-linear'>查看详情</navigator>
+</view>

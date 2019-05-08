@@ -1,0 +1,87 @@
+/* pages/user/index/index.wxss */
+@import '/pages/user/common.wxss';
+
+/* 用户信息 */
+.person_info{
+  background-color: #fb7039;
+  position: relative;
+}
+.person_info .ps_bg{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.person_info .person_mod{
+  padding: 30rpx;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.person_info .person_mod .photo{
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+}
+.person_info .person_mod .info{
+  overflow: hidden;
+}
+.person_info .person_mod .info .name{
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.person_info .person_mod .info .level,.person_info .person_mod .share .txt{
+  opacity: .6;
+}
+.person_info .person_mod .share{
+  padding-left: 5px;
+  padding-right: 20px;
+}
+.person_info .person_mod .share .icon{
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px
+}
+
+
+/* 相关信息 */
+.person_info .oth_mod{
+  color: #fff;
+  padding-bottom:40px;
+  line-height: 1.2;
+  position:relative;
+  z-index: 2
+}
+.person_info .oth_mod .name{
+  padding-bottom: 5px;
+}
+
+/* 订单入口 */
+.order_link{
+  width: calc(100% - 150rpx);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
+  line-height: 50px;
+  border-radius: 4px;
+  box-shadow: 0 0 40px rgba(251,85,57,.4);
+  position: relative;
+  z-index: 2;
+  color: #444;
+}
+.order_link:after{
+  content: '';
+  width: 1px;
+  height: 50%;
+  background-color: #ddd;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+}

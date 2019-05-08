@@ -1,0 +1,62 @@
+<!--pages/shop/success/pintuan_ok.wxml-->
+<!-- 订单列表 -->
+<view class='cart_list'>
+  <view class='cart_top bottom-line flex-row'>
+    <view class='flex-full font-size-28 font-color-33'>{{order.store}}</view>
+  </view>
+  <view class='product_list'>
+    <view class='pro-box flex-row'>
+      <view class='pro-photo'>
+        <image class='pro-img' src='{{order.goods[0].photo}}'></image>
+      </view>
+      <view class='pro-info flex-full'>
+        <view class='name font-size-28 font-color-33'>{{order.goods[0].name}}</view>
+        <view class='sub-name'></view>
+        <view class='pro-price flex-row'>
+          <view class='flex-full font-size-34 font-color-red'>￥{{order.goods[0].single}}</view>
+          <view class='pro-num font-size-28 font-color-66'>单独购买：￥{{order.goods[0].single}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='pintuan-ok top-line'>
+  <view class='pin-friend-ul'>
+    <view class='pin-friend-li'>
+      <view class='pin-friend-div'>
+        <text class='my-cart-num'>团</text>
+        <image class='pin-friend-img' src='/images/default/188x188.jpg'></image>
+      </view>
+    </view>
+    <view class='pin-friend-li'>
+      <image class='pin-friend-img' src='/images/default/188x188.jpg'></image>
+    </view>
+    <view class='pin-friend-li'>
+      <image class='pin-friend-img' src='/images/default/188x188.jpg'></image>
+    </view>
+  </view>
+  <button open-type='share' class='ad bg-linear2'>
+    <image class='share' src='/images/shop/icon-share.png'></image>
+    邀请好友拼团</button>
+  <view class='font-size-26 text-a-c'>分享好友更容易成功哦~</view>
+</view>
+
+<!-- 猜你喜欢 -->
+<view class='yourLikeTitle'>
+  <image class='like-love' src='/images/shop/icon-love.png'></image>
+  <view class='like-text font-size-30'>更多推荐</view>
+</view>
+
+<view class='product_list_ul'>
+  <view class='product_list_li' wx:for="{{productList}}" wx:key="{{item.proid}}" wx:for-index="idx" bindtap='skip_product' data-proid='{{item.proid}}'>
+    <image src="{{item.src}}" class="pro_list_img" id="{{idx}}"></image>
+    <view class='pro_list_title'>{{item.date}}</view>
+    <view class='pro_list_info'>
+      <text class='width60 font-size-28'>{{item.title}}</text>
+      <text class='width40 font-size-24 text-a-r'>{{item.count}}人拼团</text>
+      <text class='width40 font-size-32 font-color-red'>{{item.price}}</text>
+      <text class='width60 text-a-r font-size-22'>总拼团{{item.total}}件</text>
+    </view>
+  </view>
+</view>

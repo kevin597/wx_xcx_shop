@@ -1,0 +1,86 @@
+<!--pages/user/agent/agent.wxml-->
+
+<!-- 申请代理商 -->
+<view class='apply_agent' wx:if='{{type == 0}}'>
+  <view class='dm-norlist bg-w top-line bottom-line dm-mt dm-mb'>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>用户姓名</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的姓名' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>手机号</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的手机号' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>身份证号</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的身份证号' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>银行卡号</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的银行卡号' />
+      </view>
+    </view>
+
+    <view class='input flex-row bottom-line'>
+      <view class='name'>开户行</view>
+      <view class='cot flex-full'>
+        <input class='max-input tr' placeholder='请输入您的开户行' />
+      </view>
+    </view>
+
+  </view>
+
+  <view class='card_mod h4 bg-w top-line bottom-line dm-mb'>
+    <view class='box cover' bindtap='update_frt'>
+      <image wx:if='{{form.card_frt}}' class='img' src='{{form.card_frt}}' />
+      <view wx:else class='mod'>身份证正面照</view>
+    </view>
+     <view class='box cover' bindtap='update_rev'>
+      <image wx:if='{{form.card_rev}}' class='img' src='{{form.card_rev}}' />
+      <view wx:else class='mod'>身份证反面照</view>
+    </view>
+  </view>
+
+  <button class='bottom-btn' bindtap='submit_form'>提交审核</button>
+
+</view>
+<!-- 申请代理商 end -->
+
+<!-- 代理商模块 -->
+<view class='agent_wrap' wx:else>
+  <view class='egg_top'>
+    <image class='bg' src='/images/personal/egg_bg.png'></image>
+    <view class='t1 tc pr h5'>当前鸡蛋数</view>
+    <view class='cur tc pr'>{{eggNum}}</view>
+    <view class='share flex-col' bindtap='view_code'>
+      <image class='img' src='/images/personal/share_icon.png'></image>
+      <text class='h6'>分享二维码</text>
+    </view>
+  </view>
+
+  <view class='dm-title dm-mt bottom-line bg-w'>
+    <view class='sub'>推荐入驻商家</view>
+  </view>
+
+  <view class='dm-norlist bg-w bottom-line'>
+    <view class='list flex-row flex-top bottom-line' wx:for='{{store}}' wx:key='item.id'>
+      <view class='name flex-full'>{{item.name}}</view>
+      <view class='cot h5'>{{item.time}}</view>
+    </view>
+  </view>
+
+
+  <button class='bottom-btn' bindtap='cash_apply'>提现</button>
+</view>
+<!-- 代理商模块 end -->

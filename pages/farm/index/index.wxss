@@ -1,0 +1,457 @@
+/**index.wxss**/
+
+.page_full {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.isIphoneX {
+  top: 68rpx;
+}
+
+page {
+  min-height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.userinfo-avatar {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 40rpx;
+  top: 138.2rpx;
+}
+
+.userinfo-number {
+  width: 112rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 135rpx;
+  top: 138rpx;
+}
+
+.btn-index {
+  width: 110rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  font-size: 12px;
+  color: #333;
+  line-height: 40rpx;
+  display: block;
+  border: 0 none;
+  outline: 0 none;
+  background: transparent;
+}
+
+button::after {
+  border: none;
+}
+
+.qiandao {
+  left: 30rpx;
+  top: 260rpx;
+}
+
+.dongtai {
+  right: 28rpx;
+  top: 140rpx;
+}
+
+.fenxiang {
+  right: 28rpx;
+  top: 270rpx;
+}
+
+.haoyou {
+  right: 28rpx;
+  top: 400rpx;
+}
+
+.nongchang {
+  left: 33rpx;
+  bottom: 36rpx;
+}
+
+.jishi {
+  left: 186rpx;
+  bottom: 36rpx;
+}
+
+.huiyuan {
+  left: 338rpx;
+  bottom: 36rpx;
+}
+
+.xiaoxi {
+  width: 430rpx;
+  height: 66rpx;
+  border-radius: 40rpx;
+  background-color: #548912;
+  left: 32rpx;
+  bottom: 190rpx;
+  overflow: hidden;
+}
+
+.xiaoxi .userinfo-pic {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 8rpx;
+  display: block;
+  float: left;
+  border-radius: 50%;
+}
+
+.xiaoxi .userinfo-txt {
+  height: 50rpx;
+  line-height: 50rpx;
+  display: block;
+  float: left;
+  margin: 8rpx;
+  overflow: hidden;
+  color: #fdf8d8;
+  font-size: 26rpx;
+}
+
+.ny-userinfo {
+  width: 110rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #fdf8d8;
+  right: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.userinfo-food {
+  bottom: 112rpx;
+}
+
+.userinfo-egg {
+  bottom: 31rpx;
+}
+
+.select_box {
+  width: 270rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: left;
+  position: absolute;
+  left: 140rpx;
+  top: 172rpx;
+}
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 8rpx;
+  align-items: center;
+  padding: 0 20rpx;
+  position: relative;
+}
+
+.select_text {
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+
+.words_img {
+  width: 16rpx;
+  height: 10rpx;
+  display: block;
+  transition: transform 0.3s;
+  position: absolute;
+  right: 20rpx;
+  top: 22rpx;
+}
+
+.select_img_rotate {
+  transform: rotate(180deg);
+}
+
+.option_box {
+  position: absolute;
+  top: 50rpx;
+  width: 100%;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: rgba(255, 255, 255, 0.25);
+  transition: height 0.3s;
+}
+
+.option {
+  display: block;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  padding: 10rpx;
+  color: #fff;
+  padding-left: 20rpx;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0; 
+  right: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 700rpx;
+  height: 990rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9500;
+  margin-top: -495rpx;
+  margin-left: -350rpx;
+}
+
+.modal-bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 700rpx;
+  height: 990rpx;
+}
+
+.modal-btn-hide {
+  position: absolute;
+  right: 26rpx;
+  bottom: 12rpx;
+  width: 70rpx;
+  height: 70rpx;
+  opacity: 0;
+}
+
+.modal-bg-top {
+  position: absolute;
+  left: 258rpx;
+  top: 26rpx;
+  width: 190rpx;
+  height: 60rpx;
+}
+
+.modal-text-box {
+  width: 540rpx;
+  height: 310rpx;
+  background-color: #e9d6be;
+  z-index: 9600;
+  position: relative;
+  margin: 50rpx auto;
+  border-radius: 16rpx;
+  -moz-box-shadow: 0 2px 4px #d4ba9e inset;
+  box-shadow: 0 2px 4px #d4ba9e inset;
+  padding: 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.modal-text-box-noe {
+  margin-top: 220rpx;
+}
+
+.modal-text-title, .modal-text-content {
+  color: #774304;
+  font-size: 26rpx;
+  display: block;
+  line-height: 40rpx;
+}
+
+.modal-text-title {
+  font-weight: bold;
+  font-size: 32rpx;
+  text-align: center;
+  height: 50rpx;
+}
+
+.modal-text-content {
+  text-indent: 2em;
+}
+
+.modal-top-text {
+  font-size: 45rpx;
+  color: #fde3a7;
+  font-weight: bold;
+}
+
+.h100 {
+  height: 100rpx;
+  font-size: 32rpx;
+  color: #774304;
+}
+
+.mt180 {
+  height: 700rpx;
+  width: 570rpx;
+  margin: 0 auto;
+  margin-top: 190rpx;
+}
+
+.mb30 {
+  margin: 30rpx auto;
+}
+
+.userinfo-img {
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+
+.friend-top {
+  text-align: center;
+  line-height: 70rpx;
+  font-weight: bold;
+}
+
+.userinfo-top, .friend-top, .userinfo-hand, .userinfo-img {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.news-hand {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #faac4f;
+  margin-right: 20rpx;
+}
+
+.news-hand-img {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 5rpx auto;
+}
+
+.news-h {
+  height: auto;
+  min-height: 100rpx;
+  font-size: 32rpx;
+  margin: 15rpx auto;
+  color: #774304;
+  position: relative;
+  margin-left: 20rpx;
+  overflow: visible;
+}
+
+.news-h:after {
+  content: '';
+  position: absolute;
+  left: -32rpx;
+  top: 50rpx;
+  width: 0;
+  height: 0;
+  border-width: 18rpx;
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: currentColor;
+  color: #e9d6be;
+}
+
+.news-time {
+  font-size: 26rpx;
+  color: rgba(119, 67, 4, 0.7);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-full {
+  flex: 1;
+  overflow: hidden;
+}
+
+
+
+
+
+
+/* 幸运大转盘 */
+.wheel_wrap{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 10;
+}
+.wheel_wrap .mask{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .6;
+}
+.wheel_wrap .wheel_mod{
+  position: absolute;
+  width: 100%;
+  height: 840rpx;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.wheel_wrap .wheel_mod .bg{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+}
+.wheel_wrap .wheel_mod .close{
+  display: block;
+  position: absolute;
+  width: 66rpx;
+  height: 67rpx;
+  top:6rpx;
+  right: 50rpx;
+  z-index: 12;
+}
+.wheel_wrap .wheel_mod .main{
+  display: block;
+  position: absolute;
+  width: 586rpx;
+  height: 586rpx;
+  top:124rpx;
+  left: 50%;
+  margin-left: -293rpx;
+  transform-origin: center;
+  pointer-events: none;
+}
+.wheel_wrap .wheel_mod .arrow{
+  display: block;
+  position: absolute;
+  width: 211rpx;
+  height: 232rpx;
+  top:290rpx;
+  left:50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* 幸运大转盘 end */

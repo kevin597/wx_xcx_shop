@@ -1,0 +1,117 @@
+var jsonData = [{
+  "proid": 1,
+  "title": "东北长白山土鸡蛋10只（1kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "60.00",
+  "total": "1024",
+  "count": 2
+}, {
+  "proid": 2,
+  "title": "纯天然深林山鸡蛋20只（2kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "50.00",
+  "total": "324",
+  "count": 3
+}, {
+  "proid": 3,
+  "title": "纯天然鲜活有机柴鸡蛋50只（6kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "30.00",
+  "total": "24",
+  "count": 4
+}, {
+  "proid": 4,
+  "title": "农家散养土鸡蛋40只（3kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "40.00",
+  "total": "2324",
+  "count": 1
+}, {
+  "proid": 5,
+  "title": "纯天然鲜活有机柴鸡蛋正宗100只（10kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "40.00",
+  "total": "2324",
+  "count": 1
+}, {
+  "proid": 6,
+  "title": "农家散养土鸡蛋10只（1kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "40.00",
+  "total": "2324",
+  "count": 1
+}, {
+  "proid": 7,
+  "title": "吉林无公害蛋30只（2.5kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "40.00",
+  "total": "2324",
+  "count": 1
+}, {
+  "proid": 8,
+  "title": "东北长白山土鸡蛋10只（1kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "60.00",
+  "total": "1024",
+  "count": 2
+}, {
+  "proid": 9,
+  "title": "纯天然深林山鸡蛋20只（2kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "50.00",
+  "total": "324",
+  "count": 3
+}, {
+  "proid": 10,
+  "title": "纯天然鲜活有机柴鸡蛋50只（6kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "30.00",
+  "total": "24",
+  "count": 4
+}, {
+  "proid": 11,
+  "title": "农家散养土鸡蛋40只（3kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "40.00",
+  "total": "2324",
+  "count": 1
+}, {
+  "proid": 12,
+  "title": "纯天然鲜活有机柴鸡蛋正宗100只（10kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "40.00",
+  "total": "2324",
+  "count": 1
+}, {
+  "proid": 13,
+  "title": "农家散养土鸡蛋10只（1kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "40.00",
+  "total": "2324",
+  "count": 1
+}, {
+  "proid": 14,
+  "title": "吉林无公害蛋30只（2.5kg）",
+  "src": "/images/shop/product.jpg",
+  "date": "23:34:05",
+  "price": "40.00",
+  "total": "2324",
+  "count": 1
+}]
+//定义数据出口
+module.exports = {
+  dataList: jsonData
+}

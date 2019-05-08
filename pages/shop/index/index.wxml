@@ -1,0 +1,47 @@
+<!--pages/shop/index/index.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='flex-row search-form'>
+    <view class='flex-full search'>
+      <view class='iconfont icon-search search-search'></view>
+      <input placeholder="搜索" name='keyword' bindconfirm="formSubmit" class='flex-full search-input' />
+    </view>
+    <navigator url='/pages/user/index/index' class='iconfont icon-bell search-bell'></navigator>
+  </view>
+</form>
+
+<swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="this">
+    <swiper-item>
+      <image wx:if="{{item.isimg}}" class="sslide_image" src="{{item.src}}" bindtap="swipclick" id="{{item.url}}"></image>
+      <video wx:else class="sslide_image" autoplay="true" loop="true" src="{{item.video}}" bindtap="swipclick" id="{{item.url}}"></video>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='nav_btn'>
+  <view class="nav_list" wx:for="{{nav_arry}}" wx:key="{{nav_arry}}" wx:for-index="idx" bindtap="btnanniu" data-id='{{item.id}}'>
+    <image src="{{item.src}}" mode="aspectFit" class="nav_list_img" id="{{idx}}"></image>
+    <text>{{item.text}}</text>
+  </view>
+</view>
+
+<navigator url='/pages/shop/shop/shop'>
+  <image class='ad' src='/images/shop/ad.jpg'></image>
+</navigator>
+
+<view class='product_title'>
+  <navigator class='product_title_a' url='../pintuan_list/ptlist'>查看所有拼团</navigator>
+</view>
+
+<view class='product_list_ul'>
+  <view class='product_list_li' wx:for="{{productList}}" wx:key="{{item.proid}}" wx:for-index="idx" bindtap='skip_product' data-proid='{{item.proid}}'>
+    <image src="{{item.src}}" class="pro_list_img" id="{{idx}}"></image>
+    <view class='pro_list_title'>{{item.date}}</view>
+    <view class='pro_list_info'>
+      <text class='width60 font-size-28'>{{item.title}}</text>
+      <text class='width40 font-size-24 text-a-r'>{{item.count}}人拼团</text>
+      <text class='width40 font-size-32 font-color-red'>{{item.price}}</text>
+      <text class='width60 text-a-r font-size-22'>总拼团{{item.total}}件</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,112 @@
+<!--pages/shop/order/product.wxml-->
+<view class='order-top flex-row'>
+  <image class='img' src='/images/shop/bg_order.jpg'></image>
+  <image class='cart' src='/images/personal/car_icon.png'></image>
+  <view class='text'>
+    <view class='isGoods font-size-36'>平台已发货</view>
+    <view class='font-size-28'>还剩14天23小时自动收货</view>
+  </view>
+</view>
+
+<view class='order-box flex-row bottom-line'>
+  <view class='box-left'>
+    <image class='img' src='/images/shop/icon-car.png'></image>
+  </view>
+  <view class='flex-full font-size-28'>
+    <view>快递公司：申通快递</view>
+    <view>快递单号：st2019041900879</view>
+  </view>
+</view>
+
+<view class='order-box flex-row'>
+  <view class='box-left'>
+    <image class='img' src='/images/shop/icon-address.png'></image>
+  </view>
+  <view class='flex-full'>
+    <view class='flex-row'>
+      <view class='font-size-30'>张小姐</view>
+      <view class='flex-full font-size-28 font-color-80'>18152365236</view>
+    </view>
+    <view class='font-size-28'>安徽省合肥市蜀山区西湖国际广场C座1234豆米科技</view>
+  </view>
+</view>
+
+<!-- 订单列表 -->
+<view class='cart_list'>
+  <view class='cart_top bottom-line flex-row'>
+    <view class='flex-full font-size-28 font-color-33'>{{order.store}}</view>
+  </view>
+  <view class='product_list'>
+    <view class='pro-box flex-row' wx:for='{{order.goods}}' wx:for-item="goods" wx:key='goods.id'>
+      <view class='pro-photo'>
+        <image class='pro-img' src='{{goods.photo}}'></image>
+      </view>
+      <view class='pro-info flex-full'>
+        <view class='name font-size-28 font-color-33'>{{goods.name}}</view>
+        <view class='sub-name'></view>
+        <view class='pro-price flex-row'>
+          <view class='flex-full font-size-34 font-color-red'>￥{{goods.single}}</view>
+          <view class='pro-num font-size-28 font-color-66'>X{{goods.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='cart_top top-line text-a-r font-size-28'>
+    <text>共{{order.goods.length}}件 小计:</text>
+    <text class='font-color-red'>￥{{totalPrice}}</text>
+  </view>
+</view>
+
+<view class='pay-box margin-20 font-size-28'>
+  <view class='flex-row'>
+    <text class='flex-left'>订单编号</text>
+    <text class='flex-full'>20190415002945123</text>
+  </view>
+  <view class='flex-row'>
+    <text class='flex-left'>支付方式</text>
+    <text class='flex-full'>微信</text>
+  </view>
+  <view class='flex-row'>
+    <text class='flex-left'>下单时间</text>
+    <text class='flex-full'>2019-4-15  13:24:01</text>
+  </view>
+  <view class='flex-row'>
+    <text class='flex-left'>发货时间</text>
+    <text class='flex-full'>2019-4-16  15:24:01</text>
+  </view>
+</view>
+
+<!-- 猜你喜欢 -->
+<view class='yourLikeTitle'>
+  <image class='like-love' src='/images/shop/icon-love.png'></image>
+  <view class='like-text font-size-30'>猜你喜欢</view>
+</view>
+
+<view class='yourLike'>
+  <view class='products flex-row flex-top' wx:for="{{productList}}" wx:key="{{item.proid}}" wx:for-index="idx">
+    <image src="{{item.src}}" class="pros_list_img" id="{{idx}}" bindtap='skip_product' data-proid='{{item.proid}}'></image>
+
+    <view class='products-right flex-full'>
+      <view class='products-title font-size-30' bindtap='skip_product' data-proid='{{item.proid}}'>{{item.title}}</view>
+
+      <view class='products-price flex-row'>
+        <text class='flex-full font-color-red font-size-36'>￥{{filters.toNumber(item.price)}}</text>
+        <text class='flex-full font-size-24 font-color-80'>{{item.buy}}人付款</text>
+      </view>
+
+      <view class='flex-row'>
+        <navigator url='../shop/shop' class='go-shop arrow_gray font-size-26'>进店</navigator>
+        <view class='flex-full'></view>
+        <image class='add-cart' bindtap='add_cart' data-proid='{{item.proid}}' src='/images/shop/icon-cart.png'></image>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<!-- 底部按钮 -->
+<view class='cart'></view>
+<view class='footer flex-row'>
+  <view class='flex-full'></view>
+  <view bindtap='btn_submit_order' class='submitOrder font-size-32 flex-full'>确认收货</view>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/user/suggest/suggest.wxml-->
+<radio-group class="radio-group dm-norlist top-line bottom-line bg-w dm-mt">
+  <label class="radio list flex-row bottom-line" wx:for="{{identy}}" wx:key='index'>
+    <view class='name'>{{item.name}}</view>
+    <view class='cot flex-full tr'><radio value="{{item.type}}" checked="{{item.checked}}" /></view>
+  </label>
+</radio-group>
+
+<view class='text_box top-line bottom-line'>
+  <textarea class='txt h4' placeholder='请输入反馈意见'></textarea>
+</view>
+
+<button class='submit_btn'>提交</button>

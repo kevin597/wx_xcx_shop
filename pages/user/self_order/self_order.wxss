@@ -1,0 +1,2 @@
+/* pages/user/self_order/self_order.wxss */
+@import '/pages/user/common.wxss';

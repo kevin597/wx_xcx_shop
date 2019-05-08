@@ -1,0 +1,57 @@
+<!--pages/shop/shop/shop.wxml-->
+<wxs module="filters" src="../../../filter/filter.wxs"></wxs>
+
+<!-- 自定义顶部标题 -->
+<my-component my-property='{{navTitleText}}' />
+
+<!-- 店铺背景图 -->
+<image class="page_bg" src='/images/shop/page_bg.jpg'></image>
+
+<!-- 店铺头图/名称 -->
+<view class='shop-title flex-row flex-top'>
+  <image class="shop-img" src='{{shop.src}}'></image>
+  <text class='shop-name font-size-30 flex-full'>{{shop.name}}</text>
+</view>
+
+<!-- tab选项卡 -->
+<view class="swiper-tab">
+  <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">首页</view>
+  <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">商品</view>
+</view>
+
+<view class='swiper' wx:if="{{currentTab==0}}">
+  <view class='content'>
+    <video src="/images/night.mp4"></video>
+    <image src="/images/shop/pic.jpg"></image>
+    <image src="/images/shop/pic.jpg"></image>
+  </view>
+</view>
+
+<view class='swiper' wx:if="{{currentTab==1}}">
+  <!-- 商品列表 -->
+  <view class='products flex-row flex-top' wx:for="{{productList}}" wx:key="{{item.proid}}" wx:for-index="idx">
+    <image src="{{item.src}}" class="pros_list_img" id="{{idx}}" bindtap='skip_product' data-proid='{{item.proid}}'></image>
+
+    <view class='products-right flex-full'>
+      <view class='products-title font-size-30' bindtap='skip_product' data-proid='{{item.proid}}'>{{item.title}}</view>
+
+      <view class='products-price flex-row'>
+        <text class='flex-full font-color-red font-size-36'>￥{{filters.toNumber(item.price)}}</text>
+        <text class='flex-full font-size-24 font-color-80'>{{item.total}}人付款</text>
+      </view>
+
+      <view class='flex-row'>
+        <view class='flex-full'></view>
+        <image class='add-cart' bindtap='add_cart' data-proid='{{item.proid}}' src='/images/shop/icon-cart.png'></image>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+
+<!-- 悬浮的我的购物车 -->
+<view class='my-cart' wx:if="{{currentTab==1}}">
+  <text class='my-cart-num' wx:if="{{myCart.length>0}}">{{myCart.length}}</text>
+  <image class='my-cart-img' bindtap='skip_cart' src='/images/shop/my-cart.png'></image>
+</view>

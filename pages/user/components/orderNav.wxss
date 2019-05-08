@@ -1,0 +1,14 @@
+/* pages/user/components/orderNav.wxss */
+/* 订单状态 */
+.statu_tab{line-height: 44px;background-color: #fff;position:fixed;top: 0;left:0;width:100%;z-index: 3}
+.statu_tab .tab{color: #555;position: relative}
+.statu_tab .tab.clk{color: #f7824e}
+.statu_tab .tab.clk::after{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #f7824e;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

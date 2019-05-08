@@ -1,0 +1,35 @@
+<!--pages/user/vip/vip.wxml-->
+
+<view class="person_info">
+  <image class='ps_bg' src='/images/personal/personal_bg.png'></image>
+  <!-- 用户信息 -->
+  <view class='person_mod flex-row'>
+    <view class="photo cover">
+      <image class='img' src='{{user.photo}}'></image>
+    </view>
+    <view class='info flex-full'>
+      <view class='name h4 nowrap'>{{user.name}}</view>
+      <view class='level h6'>会员等级：{{user.level}}</view>
+    </view>
+  </view>
+  <!-- 用户信息 end -->
+</view>
+
+<view class='dm-norlist bottom-line bg-w'>
+  <view class='list bottom-line flex-row'>
+    <view class='name'>到期时间</view>
+    <view class='cot flex-full tr'>2019-09-08</view>
+  </view>
+  <view class='list flex-row'>
+    <view class='name'>剩余天数</view>
+    <view class='cot flex-full tr'>200</view>
+  </view>
+</view>
+
+
+<view class='tc intro'>
+  <text class='t1 h4'>200会员签到领鸡蛋\n365会员养鸡计划365鸡蛋+老母鸡</text>
+  <text class='t2 h5'>预计一年能省1000元  立即加入</text>
+</view>
+
+<button class='submit_btn' bindtap='skip_renew'>立即开通/续费</button>
